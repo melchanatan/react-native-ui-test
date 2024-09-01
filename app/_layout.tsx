@@ -10,7 +10,7 @@ import { useEffect } from "react";
 import "react-native-reanimated";
 import { TamaguiProvider, View, createTamagui } from "tamagui";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
-import { toast, Toasts } from "@backpackapp-io/react-native-toast";
+import Toast from "react-native-toast-message";
 
 import defaultConfig from "@tamagui/config/v3";
 
@@ -42,7 +42,7 @@ export default function RootLayout() {
       <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
         <GestureHandlerRootView>
           <Stack />
-          <Toasts />
+          {/* <Toast /> */}
         </GestureHandlerRootView>
       </ThemeProvider>
     </TamaguiProvider>
